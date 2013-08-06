@@ -35,7 +35,7 @@ describe Cookie do
     end
 
     it "returns the cookie object" do
-      cookie.bake!(10).should be_an_instance_of Cookie
+      cookie.bake!(10).should eq(cookie)
     end
 
     it "changes the status of the cookie when given enough time" do
@@ -51,7 +51,6 @@ describe Cookie do
     context "when unbaked" do
       it "is `:doughy`" do
         cookie.bake!(6).status.should eq(:doughy)
-        #cookie.status.should eq(:doughy)
       end
     end
 
